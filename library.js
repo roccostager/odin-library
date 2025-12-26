@@ -12,8 +12,25 @@ function Book(title, author, date, read) {
 const tableDisplay = document.getElementById('book-data');
 const openModalButton = document.getElementById('open-modal');
 const modal = document.querySelector('.modal');
+const form = document.querySelector('form');
 
 openModalButton.addEventListener('click', () => {
     modal.classList.add('visible');
 })
 
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const data = new FormData(e.target);
+    const objectifiedData = storeInputData(data);
+    myLibrary.push(objectifiedData);
+})
+
+function storeInputData(data) {
+    const newBook = new Book(
+        data.get('title'),
+        data.get('author'),
+        data.get('date'),
+        data.get('read') === 'on',
+    );
+    return newBook;
+}

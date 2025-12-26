@@ -1,3 +1,8 @@
+:root {
+    --border-color: oklch(90% 0 0);
+    --border-color-strong: oklch(85% 0 0);
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -6,7 +11,7 @@ body {
 header {
     padding: 0 20px 10px 20px;
     background-color: oklch(99% 0 0);
-    border-bottom: 2px solid oklch(90% 0 0);
+    border-bottom: 2px solid var(--border-color);
     height: 60px;
 }
 header h2 {
@@ -25,5 +30,50 @@ table {
 }
 table, td, th {
     padding: 1em 4em;
-    border: 2px solid oklch(90% 0 0);
+    border: 2px solid var(--border-color);
+}
+
+.modal {
+    visibility: hidden;
+    position: fixed;
+    width: 100%;
+    top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-body {
+    background-color: oklch(95% 0 0);
+    border: 2px solid var(--border-color);
+    border-radius: 20px;
+    padding: 0 20px 20px 20px;
+    filter: drop-shadow(5px 5px 5px var(--border-color))
+}
+
+.modal-body form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.modal-body form div label {
+    display: block;
+}
+
+.modal-body form button {
+    
+}
+
+.modal.visible {
+    visibility: visible;
+}
+
+button {
+    margin: 25px;
+    border-color: var(--border-color-strong);
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    background-color: oklch(90% 0 0);
+    font-weight: 600;
 }

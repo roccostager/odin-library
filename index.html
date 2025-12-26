@@ -6,7 +6,7 @@
     <title>Library</title>
 
     <link rel="stylesheet" href="styles.css">
-    <script src="library.js"></script>
+    <script src="library.js" defer></script>
 </head>
 <body>
     <header>
@@ -28,7 +28,35 @@
 
                 </tbody>
             </table>
+
+            <button id="open-modal">Add book.</button>
         </div>
     </main>
+
+    <div class="modal">
+        <div class="modal-body">
+            <h2>Add book.</h2>
+            <form>
+                <div class="input-field">
+                    <label for="title-field">Title</label>
+                    <input id="title-field" type="text">
+                </div>
+                <div class="input-field">
+                    <label for="author-field">Author</label>
+                    <input id="author-field" type="text">
+                </div>
+                <div class="input-field">
+                    <label for="date-field">Date</label>
+                    <input id="date-field" type="date">
+                </div>
+                <div class="input-field">
+                    <label for="read-field">Have you read this book?</label>
+                    <input id="read-field" type="checkbox">
+                </div>
+
+                <button type="submit">Add book.</button>
+            </form>
+        </div>
+    </div>
 </body>
 </html>

@@ -62,7 +62,12 @@ table, td, th {
 }
 
 .modal-body form button {
-    
+    margin: 0;
+    border-color: var(--border-color-strong);
+    border-radius: 10px;
+    padding: 0.5em 1em;
+    background-color: oklch(90% 0 0);
+    font-weight: 600;
 }
 
 .modal.visible {

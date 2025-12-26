@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    padding: 0 20px 10px 20px;
+    background-color: oklch(99% 0 0);
+    border-bottom: 2px solid oklch(90% 0 0);
+    height: 60px;
+}
+header h2 {
+    line-height: 0;
+}
+
+.centre-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+table {
+    border-collapse: collapse;
+}
+table, td, th {
+    padding: 1em 4em;
+    border: 2px solid oklch(90% 0 0);
+}

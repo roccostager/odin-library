@@ -9,4 +9,11 @@ function Book(title, author, date, read) {
     this.read = read;
 }
 
-const tableDisplay = document.getElementById('book-data')
+const tableDisplay = document.getElementById('book-data');
+const openModalButton = document.getElementById('open-modal');
+const modal = document.querySelector('.modal');
+
+openModalButton.addEventListener('click', () => {
+    modal.classList.add('visible');
+})
+
